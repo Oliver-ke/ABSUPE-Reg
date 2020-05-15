@@ -5,10 +5,10 @@ import StudentCard from '../components/card/Card';
 import colors from '../constants/Colors';
 
 const HEADER_MAX_HEIGHT = 100;
-const HEADER_MIN_HEIGHT = Platform.OS === 'ios' ? 60 : 20;
+const HEADER_MIN_HEIGHT = Platform.OS === 'ios' ? 60 : 50;
 const HEADER_SCROLL_DISTANCE = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT;
 
-const HomeScreen = (props) => {
+const HomeScreen = ({ navigation }) => {
 	const scrollY = React.useRef(new Animated.Value(0)).current;
 	const [ refreshing, setRefereshing ] = React.useState(false);
 
@@ -67,6 +67,7 @@ const HomeScreen = (props) => {
 					status="Uploaded"
 					address="Emeculim street elekahia"
 					imgUrl={require('../assets/images/avater.jpg')}
+					navigation={navigation}
 				/>
 				<StudentCard
 					name="Robert Hooks"
@@ -75,6 +76,7 @@ const HomeScreen = (props) => {
 					status="Uploaded"
 					address="Emeculim street elekahia"
 					imgUrl={require('../assets/images/avater.jpg')}
+					navigation={navigation}
 				/>
 				<StudentCard
 					name="Robert Hooks"
@@ -83,6 +85,7 @@ const HomeScreen = (props) => {
 					status="Uploaded"
 					address="Emeculim street elekahia"
 					imgUrl={require('../assets/images/avater.jpg')}
+					navigation={navigation}
 				/>
 				<StudentCard
 					name="Robert Hooks"
@@ -91,6 +94,7 @@ const HomeScreen = (props) => {
 					status="Uploaded"
 					address="Emeculim street elekahia"
 					imgUrl={require('../assets/images/avater.jpg')}
+					navigation={navigation}
 				/>
 				<StudentCard
 					name="Robert Hooks"
@@ -99,6 +103,7 @@ const HomeScreen = (props) => {
 					status="Uploaded"
 					address="Emeculim street elekahia"
 					imgUrl={require('../assets/images/avater.jpg')}
+					navigation={navigation}
 				/>
 				<StudentCard
 					name="Robert Hooks"
