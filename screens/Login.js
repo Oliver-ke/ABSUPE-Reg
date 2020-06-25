@@ -5,12 +5,12 @@ import { FontAwesome, Feather } from '@expo/vector-icons';
 import colors from '../constants/Colors';
 
 const LoginScreen = ({ navigation }) => {
-	const [ inputs, setInputs ] = useState({
+	const [inputs, setInputs] = useState({
 		passcode: '',
 		password: ''
 	});
-	const [ secureEntry, setSecureEntry ] = useState(false);
-	const [ wasTyped, setWasTyped ] = useState({
+	const [secureEntry, setSecureEntry] = useState(false);
+	const [wasTyped, setWasTyped] = useState({
 		password: false,
 		passcode: false
 	});
@@ -35,14 +35,14 @@ const LoginScreen = ({ navigation }) => {
 				<Text style={styles.text_header}>Account Login</Text>
 				<View style={styles.underline} />
 			</View>
-			<Animatable.View animation="fadeInUpBig" style={[ styles.footer, { backgroundColor: colors.background } ]}>
-				<Text style={[ styles.text_footer, { color: colors.text } ]}>School Passcode</Text>
+			<Animatable.View animation="fadeInUpBig" style={[styles.footer, { backgroundColor: colors.background }]}>
+				<Text style={[styles.text_footer, { color: colors.text }]}>School Passcode</Text>
 				<View style={styles.action}>
 					<FontAwesome name="user-o" color={colors.text} size={20} />
 					<TextInput
 						placeholder="your passcode"
 						placeholderTextColor="#666666"
-						style={[ styles.textInput, { color: colors.text } ]}
+						style={[styles.textInput, { color: colors.text }]}
 						autoCapitalize="none"
 						onChangeText={(val) => handleInputChange('passcode', val)}
 						onEndEditing={() => setWasTyped({ ...wasTyped, passcode: true })}
@@ -58,14 +58,14 @@ const LoginScreen = ({ navigation }) => {
 						<Text style={styles.errorMsg}>Passcode must be 4 characters long.</Text>
 					</Animatable.View>
 				)}
-				<Text style={[ styles.text_footer, { color: colors.text, marginTop: 15 } ]}>Password</Text>
+				<Text style={[styles.text_footer, { color: colors.text, marginTop: 15 }]}>Password</Text>
 				<View style={styles.action}>
 					<Feather name="lock" color={colors.text} size={20} />
 					<TextInput
 						placeholder="Your Password"
 						placeholderTextColor="#666666"
 						secureTextEntry={secureEntry}
-						style={[ styles.textInput, { color: colors.text } ]}
+						style={[styles.textInput, { color: colors.text }]}
 						autoCapitalize="none"
 						onChangeText={(val) => handleInputChange('password', val)}
 						onEndEditing={() => setWasTyped({ ...wasTyped, password: true })}
@@ -74,8 +74,8 @@ const LoginScreen = ({ navigation }) => {
 						{secureEntry ? (
 							<Feather name="eye-off" color="grey" size={20} />
 						) : (
-							<Feather name="eye" color="grey" size={20} />
-						)}
+								<Feather name="eye" color="grey" size={20} />
+							)}
 					</TouchableOpacity>
 				</View>
 				{validator('password') ? null : (
@@ -88,7 +88,7 @@ const LoginScreen = ({ navigation }) => {
 				</TouchableOpacity>
 				<View style={styles.button}>
 					<TouchableOpacity style={{ ...styles.signIn }} onPress={() => navigation.navigate('App')}>
-						<Text style={[ styles.textSign, { color: '#fff' } ]}>
+						<Text style={[styles.textSign, { color: '#fff' }]}>
 							Sign In <Feather name="log-in" size={15} color={colors.secondaryColor} />
 						</Text>
 					</TouchableOpacity>
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
 		borderTopLeftRadius: 30,
 		borderTopRightRadius: 30,
 		paddingHorizontal: 20,
-		paddingVertical: 30
+		paddingTop: 60
 	},
 	text_header: {
 		color: '#fff',

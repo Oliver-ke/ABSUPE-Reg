@@ -11,7 +11,7 @@ const DashboardStackNavigator = () => {
 	return (
 		<DashboardStack.Navigator initialRouteName="Home">
 			<DashboardStack.Screen options={{ headerShown: false }} name="Home" component={HomeScreen} />
-			<DashboardStack.Screen name="Detail" component={DetailScreen} />
+			<DashboardStack.Screen options={{ headerShown: false }} name="Detail" component={DetailScreen} />
 		</DashboardStack.Navigator>
 	);
 };
