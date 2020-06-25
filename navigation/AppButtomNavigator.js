@@ -12,7 +12,8 @@ export default function BottomTabNavigator({ navigation, route }) {
 		<BottomTab.Navigator
 			tabBarOptions={{
 				activeTintColor: colors.tintColor,
-				style: { borderTopLeftRadius: 20, borderTopRightRadius: 20 }
+				style: { borderTopLeftRadius: 20, borderTopRightRadius: 20 },
+				keyboardHidesTabBar: true
 			}}
 			initialRouteName="Dashboard"
 		>

@@ -1,11 +1,10 @@
 {
   "expo": {
-    "name": "ngator-app",
-    "slug": "ngator-app",
+    "name": "absupe-reg",
+    "slug": "absupe-reg",
     "platforms": [
       "ios",
-      "android",
-      "web"
+      "android"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
@@ -24,6 +23,10 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.trisat.abdu",
+      "versionCode": 1
     }
   }
 }
